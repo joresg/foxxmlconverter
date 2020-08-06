@@ -1,7 +1,6 @@
 C:\Users\joresg\source\repos\ViewConverter\ViewConverter\bin\Debug\ViewConverter.exe.config
 C:\Users\joresg\source\repos\ViewConverter\ViewConverter\bin\Debug\ViewConverter.exe
 C:\Users\joresg\source\repos\ViewConverter\ViewConverter\bin\Debug\ViewConverter.pdb
-C:\Users\joresg\source\repos\ViewConverter\ViewConverter\obj\Debug\ViewConverter.csprojAssemblyReference.cache
 C:\Users\joresg\source\repos\ViewConverter\ViewConverter\obj\Debug\MainWindow.g.cs
 C:\Users\joresg\source\repos\ViewConverter\ViewConverter\obj\Debug\App.g.cs
 C:\Users\joresg\source\repos\ViewConverter\ViewConverter\obj\Debug\ViewConverter_MarkupCompile.cache
@@ -13,3 +12,4 @@ C:\Users\joresg\source\repos\ViewConverter\ViewConverter\obj\Debug\ViewConverter
 C:\Users\joresg\source\repos\ViewConverter\ViewConverter\obj\Debug\ViewConverter.csproj.CoreCompileInputs.cache
 C:\Users\joresg\source\repos\ViewConverter\ViewConverter\obj\Debug\ViewConverter.exe
 C:\Users\joresg\source\repos\ViewConverter\ViewConverter\obj\Debug\ViewConverter.pdb
+C:\Users\joresg\source\repos\ViewConverter\ViewConverter\obj\Debug\ViewConverter.csprojAssemblyReference.cache

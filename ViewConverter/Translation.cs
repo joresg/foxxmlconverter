@@ -8,7 +8,8 @@ namespace ViewConverter {
     class Translation {
         public enum type_of_translation {
             GridSetting,
-            SearchType
+            SearchType,
+            Criteria
         }
         public string key { get; set; }
         public string value { get; set; }

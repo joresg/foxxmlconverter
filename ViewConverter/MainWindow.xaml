@@ -5,21 +5,74 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ViewConverter"
         mc:Ignorable="d"
-        Title="MainWindow" Height="720" Width="1800">
+        Title="MainWindow" Height="720" Width="1600">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="10*"/>
-            <RowDefinition Height="1*"/>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
         <TextBox Name="fox_code" VerticalScrollBarVisibility="Auto" Grid.Column="0" Grid.Row="0" AcceptsReturn="True"></TextBox>
-        <TextBox Name ="xml_code" VerticalScrollBarVisibility="Auto" Grid.Column="1" Grid.Row="0" AcceptsReturn="True"></TextBox>
-        <Button HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="2" Content="Convert" Click="fox2xml"></Button>
-        <CheckBox Name="InsertAction" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="2" Content="Insert"></CheckBox>
-        <CheckBox Name ="UpdateAction" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="2" Content="Update"></CheckBox>
-        <CheckBox Name ="DeleteAction" HorizontalAlignment="Left" VerticalAlignment="Bottom" Grid.Row="2" Content="Delete"></CheckBox>
+        <TextBox Name ="xml_code" VerticalScrollBarVisibility="Auto" Grid.Column="1" Grid.Row="0" AcceptsReturn="True" IsReadOnly="True"></TextBox>
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0">(file) name:</TextBlock>
+            <TextBox Margin="70,14,0,14"  Name="file_name" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="0" Grid.Column="0" ToolTip="ime datoteke" Width="150"></TextBox>
+            <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="1" Grid.Column="0">mask name:</TextBlock>
+            <TextBox Margin="70,14,0,14"  Name="mask_name" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="1" Grid.Column="0" ToolTip="ime maske" Width="150"></TextBox>
+            <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="2" Grid.Column="0">module:</TextBlock>
+            <TextBox Margin="70,14,0,14"  Name="module" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="2" Grid.Column="0" ToolTip="modul" Width="150"></TextBox>
+
+            <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="0" Grid.Column="1">table:</TextBlock>
+            <TextBox Margin="70,14,0,14"  Name="table" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="0" Grid.Column="1" ToolTip="src table" Width="150"></TextBox>
+            <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="1" Grid.Column="1">id_column:</TextBlock>
+            <TextBox Margin="70,14,0,14"  Name="id_column" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="1" Grid.Column="1" ToolTip="pk" Width="150"></TextBox>
+            <Button HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2" Grid.Column="1" Content="Convert" Click="fox2xml"></Button>
+        </Grid>
+
+        <Grid Grid.Row="1" Grid.Column="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                <CheckBox Name="InsertAction" Grid.Row="0" Content="Insert" HorizontalAlignment="Left" VerticalAlignment="Center"></CheckBox>
+                <CheckBox Name="UpdateAction" Grid.Row="1" Content="Update" HorizontalAlignment="Left" VerticalAlignment="Center"></CheckBox>
+                <CheckBox Name="DeleteAction" Grid.Row="2" Content="Delete" HorizontalAlignment="Left" VerticalAlignment="Center"></CheckBox>
+            </Grid>
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Center">View:</TextBlock>
+                <TextBox Margin="70,0"  Name = "veiw_perm" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="0" ToolTip="pravica za pregled" MinWidth="150" MaxWidth="150"></TextBox>
+                <TextBlock Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center">Insert:</TextBlock>
+                <TextBox Margin="70,0"  Name = "insert_perm" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="1" ToolTip="pravica za pregled" MinWidth="150" MaxWidth="150"></TextBox>
+                <TextBlock Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Center">Update:</TextBlock>
+                <TextBox Margin="70,0"  Name = "update_perm" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="2" ToolTip="pravica za pregled" MinWidth="150" MaxWidth="150"></TextBox>
+                <TextBlock Grid.Row="3" HorizontalAlignment="Left" VerticalAlignment="Center">Delete:</TextBlock>
+                <TextBox Margin="70,0"  Name = "delete_perm" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="3" ToolTip="pravica za pregled" MinWidth="150" MaxWidth="150"></TextBox>
+            </Grid>
+        </Grid>
     </Grid>
 </Window>
